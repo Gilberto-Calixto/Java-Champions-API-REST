@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: santander-dev-week
+  datasource:
+    url: jdbc:h2:mem:sdw
+    driver-class-name: org.h2.Driver
+    username: bs
+    password: ''
