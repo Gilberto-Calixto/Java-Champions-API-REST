@@ -5,7 +5,7 @@ import com.dev.santander.domain.ports.ChampionsRepository;
 
 import java.util.List;
 
-public record ChampionsUseCase(
+public record ListChampionsUseCase(
         ChampionsRepository repository
 ) {
     public List<Champions> findAll(){
