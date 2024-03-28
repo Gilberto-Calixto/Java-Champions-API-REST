@@ -13,8 +13,8 @@ public record Champion(
         return """
         Pergunta: %s
         Nome: %s
-        Função: %s  
-        Lore(História): %s    
+        Função: %s 
+        Lore(História): %s
         """.formatted(question,this.name, this.role, this.lore);
     }
 }

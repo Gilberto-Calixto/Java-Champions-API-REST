@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 public record AskChampionRestController(AskChampionUseCase useCase) {
 
     //recuperar dado de forma simples
+    @CrossOrigin
     @PostMapping("/{championId}/ask")
     public AskChampionResponse askChampionResponse(@PathVariable Long championId, @RequestBody AskChampionRequest request){
         String answer = useCase.askChampion(championId, request.question());
