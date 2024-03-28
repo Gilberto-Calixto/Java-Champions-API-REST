@@ -1,6 +1,7 @@
 package com.dev.santander;
 
-import com.dev.santander.adapters.application.ListChampionsUseCase;
+import com.dev.santander.application.AskChampionUseCase;
+import com.dev.santander.application.ListChampionsUseCase;
 import com.dev.santander.domain.ports.ChampionsRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,5 +16,9 @@ public class DevApplication {
     @Bean
     public ListChampionsUseCase provideListChampionsUseCase(ChampionsRepository repository){
         return new ListChampionsUseCase(repository);
+    }
+    @Bean
+    public AskChampionUseCase provideAskChampionUseCase(ChampionsRepository repository) {
+        return new AskChampionUseCase(repository);
     }
 }
